@@ -248,6 +248,24 @@ Returns traversal order as a list.
 
 ---
 
+### Maximum Flow (Dinic)
+
+Computes the maximum flow in a directed flow network.
+
+```python
+from graphkit.flow import FlowGraph
+
+g = FlowGraph()
+g.add_edge(0, 1, 3)
+g.add_edge(1, 2, 2)
+
+max_flow = g.max_flow(0, 2)
+```
+
+* Uses Dinic's algorithm
+* Automatically manages residual edges
+* Runs efficiently on large graphs
+
 ## 🧪 Testing
 
 `graphkit` uses **pytest** for testing all core algorithms.

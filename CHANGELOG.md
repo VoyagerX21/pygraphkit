@@ -6,6 +6,16 @@ This project follows **Semantic Versioning**.
 
 ---
 
+## [0.7.0] - 2026-01-18
+
+### Added
+- `FlowGraph` abstraction for flow networks
+- Dinic’s algorithm for maximum flow
+- Residual graph handling
+- Test coverage for max flow
+
+---
+
 ## [0.6.0] - 2026-01-18
 
 ### Added
