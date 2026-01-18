@@ -214,6 +214,20 @@ dist = g.floyd_warshall()
 
 ---
 
+### Strongly Connected Components (SCC)
+
+Computes strongly connected components of a directed graph.
+
+```python
+components = g.strongly_connected_components()
+```
+
+* Works only on directed graphs
+* Uses kosaraju's algorithm
+* Returns a list of node groups
+
+---
+
 ### Breadth-First Search (BFS)
 
 ```python

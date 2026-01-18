@@ -6,6 +6,7 @@ from graphkit.algorithms.traversal.dfs import dfs
 from graphkit.algorithms.mst.prim import prim
 from graphkit.algorithms.traversal.topological_sort import topological_sort
 from graphkit.algorithms.shortest_path.floyd_warshall import floyd_warshall
+from graphkit.algorithms.connectivity.kosaraju import kosaraju
 
 class Graph:
     def __init__(self, directed=False):
@@ -87,3 +88,8 @@ class Graph:
 
     def floyd_warshall(self):
         return floyd_warshall(self.adj)
+    
+    def strongly_connected_components(self):
+        if not self.directed:
+            raise ValueError("SCC requires a directed graph")
+        return kosaraju(self.adj)

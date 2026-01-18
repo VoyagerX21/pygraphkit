@@ -6,6 +6,15 @@ This project follows **Semantic Versioning**.
 
 ---
 
+## [0.6.0] - 2026-01-18
+
+### Added
+- Strongly Connected Components using Kosaraju’s algorithm
+- `Graph.strongly_connected_components()` API
+- Test coverage for SCC detection
+
+---
+
 ## [0.5.0] - 2026-01-18
 
 ### Added
