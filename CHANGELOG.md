@@ -6,6 +6,16 @@ This project follows **Semantic Versioning**.
 
 ---
 
+## [0.5.0] - 2026-01-18
+
+### Added
+- Floyd–Warshall algorithm for all-pairs shortest paths
+- `Graph.floyd_warshall()` API
+- Negative cycle detection
+- Comprehensive test coverage
+
+---
+
 ## [0.4.0] - 2026-01-18
 
 ### Added

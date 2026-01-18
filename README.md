@@ -200,6 +200,20 @@ order = g.topological_sort()
 
 ---
 
+### Floyd–Warshall Algorithm
+
+Computes all-pairs shortest paths.
+
+```python
+dist = g.floyd_warshall()
+```
+
+* Supports negative weights
+* Raises ValueError if a negative cycle exists
+* Returns a distance matrix as a nested dictionary
+
+---
+
 ### Breadth-First Search (BFS)
 
 ```python

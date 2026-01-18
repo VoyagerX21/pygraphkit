@@ -5,6 +5,7 @@ from graphkit.algorithms.traversal.bfs import bfs
 from graphkit.algorithms.traversal.dfs import dfs
 from graphkit.algorithms.mst.prim import prim
 from graphkit.algorithms.traversal.topological_sort import topological_sort
+from graphkit.algorithms.shortest_path.floyd_warshall import floyd_warshall
 
 class Graph:
     def __init__(self, directed=False):
@@ -83,3 +84,6 @@ class Graph:
         if not self.directed:
             raise ValueError("Topological sort requires a directed graph")
         return topological_sort(self.adj)
+
+    def floyd_warshall(self):
+        return floyd_warshall(self.adj)
