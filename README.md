@@ -4,7 +4,6 @@
 ![Python](https://img.shields.io/pypi/pyversions/pygraphkit)
 ![Tests](https://github.com/VoyagerX21/graphkit/actions/workflows/tests.yml/badge.svg)
 
-
 **graphkit** is a clean, reusable Python library providing standard graph algorithms with a unified and intuitive API.
 
 It is designed for:
@@ -21,22 +20,25 @@ It is designed for:
 * Simple `Graph` abstraction
 * Object-oriented API
 * Readable and canonical implementations
-* Fully testable and extensible
-* No external dependencies
+* Fully tested with CI
+* No external runtime dependencies
 
 ### Algorithms included
 
-* Shortest Path
+**Shortest Path**
 
-  * Dijkstra’s Algorithm
-  * Bellman-Ford Algorithm
-* Minimum Spanning Tree
+* Dijkstra’s Algorithm
+* Bellman–Ford Algorithm
 
-  * Kruskal’s Algorithm
-* Traversals
+**Minimum Spanning Tree**
 
-  * Breadth-First Search (BFS)
-  * Depth-First Search (DFS)
+* Kruskal’s Algorithm
+* Prim’s Algorithm
+
+**Traversals**
+
+* Breadth-First Search (BFS)
+* Depth-First Search (DFS)
 
 ---
 
@@ -60,7 +62,6 @@ pip install -e .
 from graphkit import Graph
 
 g = Graph()
-
 g.add_edge(1, 2, 4)
 g.add_edge(1, 3, 1)
 g.add_edge(3, 2, 2)
@@ -89,6 +90,8 @@ Graph(directed=False)
 * `directed=False` → undirected graph
 * `directed=True` → directed graph
 
+---
+
 ### Adding edges
 
 ```python
@@ -102,26 +105,25 @@ g.add_edge(u, v, weight)
 
 ### Removing edges
 
-You can remove edges from the graph using `remove_edge`.
+Edges can be removed dynamically using `remove_edge`.
 
 ```python
 g.remove_edge(u, v)
 ```
 
-#### Optional: remove a specific weighted edge
-
-If multiple edges exist between the same nodes, you can remove only one by specifying the weight.
+#### Remove a specific weighted edge
 
 ```python
 g.remove_edge(u, v, weight)
 ```
 
-#### Behavior
+**Behavior**
 
 * For **undirected graphs**, both directions are removed
-* For **directed graphs**, only the edge `u → v` is removed
+* For **directed graphs**, only `u → v` is removed
 * If the edge does not exist, the operation is a no-op
 
+---
 
 ## 📐 API Reference
 
@@ -141,7 +143,7 @@ Returns:
 
 ---
 
-### Bellman-Ford Algorithm
+### Bellman–Ford Algorithm
 
 Supports negative edge weights and detects negative cycles.
 
@@ -159,7 +161,7 @@ ValueError: Negative cycle detected
 
 ### Kruskal’s Algorithm
 
-Computes Minimum Spanning Tree (undirected graphs only).
+Computes the Minimum Spanning Tree (undirected graphs only).
 
 ```python
 mst, total_weight = g.kruskal()
@@ -169,6 +171,19 @@ Returns:
 
 * `mst`: list of edges `(u, v, w)`
 * `total_weight`: sum of MST edge weights
+
+---
+
+### Prim’s Algorithm
+
+Computes the Minimum Spanning Tree starting from a given node.
+
+```python
+mst, total_weight = g.prim(start)
+```
+
+* Works on **undirected graphs**
+* Uses a greedy priority-queue approach
 
 ---
 
@@ -213,6 +228,8 @@ pytest -v
 
 All tests must pass before a release is published.
 
+---
+
 ## 📁 Project Structure
 
 ```
@@ -236,8 +253,8 @@ graphkit/
 ## 🎯 Design Philosophy
 
 * One **canonical implementation** per algorithm
-* No premature optimization
 * Code clarity over cleverness
+* No premature optimization
 * Easy to rewrite during competitive programming
 * Reusable in real-world systems
 
@@ -247,10 +264,10 @@ graphkit/
 
 Planned additions:
 
-* Prim’s Algorithm
-* Floyd-Warshall Algorithm
+* Floyd–Warshall Algorithm
 * Topological Sort
-* Strongly Connected Components
+* Strongly Connected Components (Kosaraju / Tarjan)
+* Maximum Flow algorithms (Edmonds–Karp, Dinic)
 * Benchmarking utilities
 
 ---
@@ -259,9 +276,11 @@ Planned additions:
 
 Contributions are welcome.
 
-* Add algorithms
-* Improve tests
-* Improve documentation
+You can help by:
+
+* Adding algorithms
+* Improving test coverage
+* Enhancing documentation
 
 Please keep implementations:
 
@@ -274,5 +293,3 @@ Please keep implementations:
 ## 📜 License
 
 MIT License
-
----

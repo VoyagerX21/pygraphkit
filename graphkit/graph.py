@@ -3,7 +3,7 @@ from graphkit.algorithms.shortest_path.bellman_ford import bellman_ford
 from graphkit.algorithms.mst.kruskal import kruskal
 from graphkit.algorithms.traversal.bfs import bfs
 from graphkit.algorithms.traversal.dfs import dfs
-
+from graphkit.algorithms.mst.prim import prim
 
 class Graph:
     def __init__(self, directed=False):
@@ -72,3 +72,8 @@ class Graph:
 
     def dfs(self, source):
         return dfs(self.adj, source)
+    
+    def prim(self, start):
+        if self.directed:
+            raise ValueError("Prim's algorithm requires an undirected graph")
+        return prim(self.adj, start)

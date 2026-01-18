@@ -6,22 +6,44 @@ This project follows **Semantic Versioning**.
 
 ---
 
+## [0.3.0] – 2026-01-18
+
+### Added
+
+* Prim’s Algorithm for Minimum Spanning Tree
+* `Graph.prim(start)` API for undirected graphs
+* Priority-queue based greedy MST implementation
+* Test coverage for Prim’s algorithm
+
+---
+
+## [0.2.0] – 2026-01-18
+
+### Added
+
+* `remove_edge` method to `Graph` class
+* Support for edge removal in directed and undirected graphs
+* Optional weight-specific edge removal
+* Test coverage for edge removal behavior
+
+---
+
 ## [0.1.1] – 2026-01-18
 
 ### Fixed
 
-* Corrected Bellman-Ford implementation to include destination-only vertices
-* Fixed KeyError issues for unreachable nodes
+* Corrected Bellman–Ford implementation to include destination-only vertices
+* Fixed `KeyError` issues for unreachable nodes
 * Improved negative weight handling
-* Added early-exit optimization to Bellman-Ford
+* Added early-exit optimization to Bellman–Ford
 
 ### Added
 
 * Comprehensive test coverage for:
 
-  * Bellman-Ford
+  * Bellman–Ford algorithm
   * Kruskal’s algorithm
-* Edge case testing for disconnected graphs
+* Edge-case testing for disconnected graphs
 * Negative cycle detection tests
 
 ---
@@ -32,15 +54,8 @@ This project follows **Semantic Versioning**.
 
 * Graph abstraction (directed and undirected)
 * Dijkstra’s algorithm
-* Bellman-Ford algorithm
+* Bellman–Ford algorithm
 * Kruskal’s algorithm
-* BFS and DFS traversals
+* Breadth-First Search (BFS)
+* Depth-First Search (DFS)
 * Initial test suite
-
-## [0.2.0]
-
-### Added
-- `remove_edge` method to Graph class
-- Supports directed and undirected graphs
-- Optional weight-specific edge removal
-
