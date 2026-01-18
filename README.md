@@ -1,4 +1,11 @@
+# graphkit\
+
 # graphkit
+
+![PyPI](https://img.shields.io/pypi/v/pygraphkit)
+![Python](https://img.shields.io/pypi/pyversions/pygraphkit)
+![Tests](https://github.com/VoyagerX21/graphkit/actions/workflows/tests.yml/badge.svg)
+
 
 **graphkit** is a clean, reusable Python library providing standard graph algorithms with a unified and intuitive API.
 
@@ -38,7 +45,7 @@ It is designed for:
 ## 📦 Installation
 
 ```bash
-pip install graphkit
+pip install pygraphkit
 ```
 
 For development:
@@ -248,9 +255,3 @@ Please keep implementations:
 MIT License
 
 ---
-
-## 👤 Author
-
-**Gaurav Khakse**
-
-If you use this library for learning or projects, a ⭐ on GitHub is appreciated.

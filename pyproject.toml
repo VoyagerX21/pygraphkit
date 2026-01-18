@@ -3,7 +3,7 @@ requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "graphkit"
+name = "pygraphkit"
 version = "0.1.1"
 description = "A clean and reusable graph algorithms toolkit"
 readme = "README.md"
