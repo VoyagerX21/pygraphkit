@@ -6,6 +6,28 @@ This project follows **Semantic Versioning**.
 
 ---
 
+## [1.0.0] – Stable Release
+
+### Highlights
+- Stable and documented public API
+- Comprehensive graph algorithms toolkit
+- Separate abstractions for graphs and flow networks
+- Fully tested with CI
+
+### Included Algorithms
+- Shortest paths: Dijkstra, Bellman–Ford, Floyd–Warshall
+- Minimum Spanning Trees: Kruskal, Prim
+- Traversals: BFS, DFS
+- DAG processing: Topological Sort
+- Connectivity: Strongly Connected Components (Kosaraju)
+- Flow algorithms: Dinic (Max Flow) and Min Cut
+
+### Notes
+- This release marks the first stable version of graphkit
+- Breaking changes will only occur in major releases (2.x)
+
+---
+
 ## [0.8.0] - 2026-01-18
 
 ### Added
