@@ -1,5 +1,3 @@
-# graphkit\
-
 # graphkit
 
 ![PyPI](https://img.shields.io/pypi/v/pygraphkit)
