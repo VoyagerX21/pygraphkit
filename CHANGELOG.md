@@ -6,6 +6,15 @@ This project follows **Semantic Versioning**.
 
 ---
 
+## [0.8.0] - 2026-01-18
+
+### Added
+- Minimum cut extraction using residual graph
+- `max_flow_with_min_cut(source, sink)` API
+- Test coverage for min-cut correctness
+
+---
+
 ## [0.7.0] - 2026-01-18
 
 ### Added

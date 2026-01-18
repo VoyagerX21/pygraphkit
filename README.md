@@ -266,6 +266,28 @@ max_flow = g.max_flow(0, 2)
 * Automatically manages residual edges
 * Runs efficiently on large graphs
 
+---
+
+### Minimum Cut (from Max Flow)
+
+Returns the minimum cut after computing maximum flow.
+
+```python
+from graphkit.flow import FlowGraph
+
+g = FlowGraph()
+g.add_edge(0, 1, 3)
+g.add_edge(1, 2, 2)
+
+max_flow, (S, T) = g.max_flow_with_min_cut(0, 2)
+```
+
+* Uses residual graph from Dinic's algorithm
+* Returns (S, T) partition of vertices
+* S contains the source
+
+---
+
 ## 🧪 Testing
 
 `graphkit` uses **pytest** for testing all core algorithms.

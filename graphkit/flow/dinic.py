@@ -79,3 +79,24 @@ class FlowGraph:
                 flow += pushed
 
         return flow
+
+    def max_flow_with_min_cut(self, s, t):
+        max_flow = self.max_flow(s, t)
+
+        # Find reachable vertices from source in residual graph
+        visited = set()
+        stack = [s]
+
+        while stack:
+            u = stack.pop()
+            if u in visited:
+                continue
+            visited.add(u)
+            for e in self.graph.get(u, []):
+                if e.cap > e.flow and e.v not in visited:
+                    stack.append(e.v)
+
+        S = visited
+        T = set(self.graph.keys()) - S
+
+        return max_flow, (S, T)
