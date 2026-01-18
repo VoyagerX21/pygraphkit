@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "graphkit"
+version = "0.1.1"
+description = "A clean and reusable graph algorithms toolkit"
+readme = "README.md"
+authors = [{ name="Gaurav Khakse" }]
+license = { text = "MIT" }
+requires-python = ">=3.9"
