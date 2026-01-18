@@ -100,6 +100,29 @@ g.add_edge(u, v, weight)
 
 ---
 
+### Removing edges
+
+You can remove edges from the graph using `remove_edge`.
+
+```python
+g.remove_edge(u, v)
+```
+
+#### Optional: remove a specific weighted edge
+
+If multiple edges exist between the same nodes, you can remove only one by specifying the weight.
+
+```python
+g.remove_edge(u, v, weight)
+```
+
+#### Behavior
+
+* For **undirected graphs**, both directions are removed
+* For **directed graphs**, only the edge `u → v` is removed
+* If the edge does not exist, the operation is a no-op
+
+
 ## 📐 API Reference
 
 ### Dijkstra’s Algorithm

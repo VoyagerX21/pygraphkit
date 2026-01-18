@@ -36,3 +36,11 @@ This project follows **Semantic Versioning**.
 * Kruskal’s algorithm
 * BFS and DFS traversals
 * Initial test suite
+
+## [0.2.0]
+
+### Added
+- `remove_edge` method to Graph class
+- Supports directed and undirected graphs
+- Optional weight-specific edge removal
+
