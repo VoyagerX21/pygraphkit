@@ -4,6 +4,7 @@ from graphkit.algorithms.mst.kruskal import kruskal
 from graphkit.algorithms.traversal.bfs import bfs
 from graphkit.algorithms.traversal.dfs import dfs
 from graphkit.algorithms.mst.prim import prim
+from graphkit.algorithms.traversal.topological_sort import topological_sort
 
 class Graph:
     def __init__(self, directed=False):
@@ -77,3 +78,8 @@ class Graph:
         if self.directed:
             raise ValueError("Prim's algorithm requires an undirected graph")
         return prim(self.adj, start)
+    
+    def topological_sort(self):
+        if not self.directed:
+            raise ValueError("Topological sort requires a directed graph")
+        return topological_sort(self.adj)

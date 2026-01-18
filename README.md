@@ -187,6 +187,19 @@ mst, total_weight = g.prim(start)
 
 ---
 
+### Topological Sort
+
+Returns a topological ordering of a directed acyclic graph (DAG).
+
+```python
+order = g.topological_sort()
+```
+
+* Works only on directed graphs
+* Raises ValueError if the graph contains a cycle
+
+---
+
 ### Breadth-First Search (BFS)
 
 ```python

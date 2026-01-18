@@ -6,6 +6,16 @@ This project follows **Semantic Versioning**.
 
 ---
 
+## [0.4.0] - 2026-01-18
+
+### Added
+- Topological Sort for directed acyclic graphs (DAGs)
+- `Graph.topological_sort()` API
+- Cycle detection with `ValueError`
+- Test coverage for valid DAGs and cycles
+
+---
+
 ## [0.3.0] – 2026-01-18
 
 ### Added
